@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Some code was taken from
+	http://matthew.wagerfield.com/parallax
+	http://tympanus.net/codrops/2013/12/24/merry-christmas-with-a-bursting-gift-box/
+
+	License
+	http://creativecommons.org/licenses/by-nc-sa/4.0/
+	-->
+	<meta charset="utf-8">
+	<title>Parallax Happy Holiday</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="styles/styles.css"/>
+</head>
+<body>
+	<header>
+		<div class="can"> <canvas id="snowfall"></canvas></div>
+		</header>	
+		<nav>
+			<div id="merrywrap" class="merrywrap">
+			<div class="giftbox"></div></div>
+				<div class="song">	
+				<img src="images/song.png" alt="Play Button" onclick="StartOrStop('music/songs.mp3')">
+				<audio id="song_a"></audio>
+				</div>
+		</nav>
+	<section>	
+		<h1>Happy Holiday</h1>
+		<div id="container" class="container">
+			<ul id="scene" class="scene">
+				<li class="layer" id="im"data-depth="1.00"><img src="images/layer.png"></li>
+				<li class="layer" id="im1" data-depth="1.00"><img src="images/layer.png"></li>
+				<li class="layer" id="im2" data-depth="1.00"><img src="images/layer.png"></li>
+				<li class="layer" id="im3" data-depth="1.00"><img src="images/layer.png"></li>
+				<li class="layer" id="im4" data-depth="1.00"><img src="images/layer.png"></li>
+				<li class="layer" id="im5" data-depth="1.00"><img src="images/layer.png"></li>
+				<li class="layer" id="im6" data-depth="1.00"><img src="images/layer.png"></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- Scripts -->
+	<script src="scripts/parallax.js"></script>
+	<script>
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+	</script>
+	<script src="scripts/rectangleEmitter.js"></script>
+	<script src="scripts/snow.js"></script>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/classie.js"></script>
+
+	<script>
+	function StartOrStop(audioFile) {
+	    var audie = document.getElementById("song_a");
+	    if (!audie.src || audie.src !== audioFile) audie.src = audioFile;
+	    if (audie.paused == false)
+	        audie.pause();
+	    else
+	        audie.play();
+	}
+	</script>
+
+</body>
+</html>
