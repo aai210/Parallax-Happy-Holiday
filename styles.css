@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Pacifico";
+  src: url(../fonts/Pacifico.ttf);
+}
+
+body {
+  font-size: 18px;
+  background-color: #e74c3c;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 120px 20px 0 0;
+  color: white;
+  font-size: 42pt;
+  font-family: "Pacifico";
+  text-align: center;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+}
+
+ul img {
+  display: block;
+  margin: 0;
+ 
+}
+
+.container {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+}
+
+.scene {
+  padding: 0;
+  margin: 0;
+}
+
+.giftbox {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  top: 150px;
+  left: 15px;
+  background-image: url(../images/snowflake.png);
+  background-size: 100%;
+}
+
+.giftbox::after {
+  content: '';
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  font-size: 24px;
+  z-index: 1;
+}
+
+#snowfall {
+  z-index: 1;
+  position: absolute;
+}
+
+#im {
+  padding-right: 970px;
+}
+
+#im1 {
+  padding-left: 970px;
+  position: absolute;
+  z-index: 1;
+}
+
+#im2 {
+  padding-left: 1940px;
+  position: absolute;
+  z-index: 1;
+}
+
+#im3 {
+  padding-left: 2910px;
+  position: absolute;
+  z-index: 1;
+}
+
+#im4 {
+  padding-left: 3880px;
+  position: absolute;
+  z-index: 1;
+}
+
+#im5 {
+  padding-left: 4850px;
+  position: absolute;
+  z-index: 1;
+}
+
+#im6 {
+  padding-left: 5820px;
+  position: absolute;
+  z-index: 1;
+}
+
+.scene {
+  margin: 185px 0 0 0;
+}
+
+.can {
+  padding: 1px;
+}
+
+.song img {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  top: 203px;
+  left: 13px;
+}
